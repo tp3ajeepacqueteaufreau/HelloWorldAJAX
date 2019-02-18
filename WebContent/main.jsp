@@ -9,11 +9,11 @@
 		<script type="text/Javascript">
 			$(document).ready(function() {
 				$("#replaceContent").click(function() {
-					var name = $("#name").val();
-					$.getJSON("AjaxJsonServlet?name=" + name, function (data) {
+					var name = $("#pays").val();
+					$.getJSON("YellowJacketAJAXServlet?pays=" + name, function (data) {
 						console.log(data);
 						var helloWorldData = data.content;
-						$("#quote p").html("<p>" + helloWorldData + "</p>");
+						$("#yellowjacket").html("<p>" + helloWorldData + "</p>");
 					});
 				});
 			});
@@ -22,10 +22,10 @@
 		<body>
 			<div id="quote">
 				<hr>
-					<p>Hello </p>
+					 <div id="yellowjacket">Manifestants = </div> 
 				<hr/>
 			</div>
-			<input type="text" id="name" value="William">
+			<input type="text" id="pays" value="France">
 			<input type="submit" id="replaceContent" value="Refresh local"></input>
 	</body>
 </html>
